@@ -8,6 +8,6 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Margin="40">This is a desktop</TextBlock>
+        <TextBlock Margin="40">This is a desktop view</TextBlock>
     </Grid>
 </Page>
