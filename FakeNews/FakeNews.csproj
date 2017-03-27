@@ -98,6 +98,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\NewsItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +108,16 @@
     <None Include="FakeNews_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Financial1.png" />
+    <Content Include="Assets\Financial2.png" />
+    <Content Include="Assets\Financial3.png" />
+    <Content Include="Assets\Financial4.png" />
+    <Content Include="Assets\Financial5.png" />
+    <Content Include="Assets\Food1.png" />
+    <Content Include="Assets\Food2.png" />
+    <Content Include="Assets\Food3.png" />
+    <Content Include="Assets\Food4.png" />
+    <Content Include="Assets\Food5.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

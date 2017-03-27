@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FakeNews.Model;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,9 +23,36 @@ namespace FakeNews
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private List<NewsItem> NewsItems;
         public MainPage()
         {
             this.InitializeComponent();
+            CurrentPageText.Text = "Foo";
+            NewsItems = NewsItemManager.GetNewsItems();
+        }
+
+        private void MenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            Menu.IsPaneOpen = !Menu.IsPaneOpen;
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (FinancialListBoxItem.IsSelected)
+            {
+               NewsItems = NewsItemManager.GetNews("Financial");
+               CurrentPageText.Text = "Fin";
+            }
+            else if (FoodListBoxItem.IsSelected)
+            {
+                NewsItems = NewsItemManager.GetNews("Food");
+                CurrentPageText.Text = "Eat";
+            }
+        }
+
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
